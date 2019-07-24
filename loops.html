@@ -9,15 +9,28 @@
     <h1>Guessing Game</h1>
 
     <script>
+    	var numbers=prompt("Guess a number: ");
+    	
 /* STARTING CODE */
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * Math.floor(max - min)) + min;
 }
 
 var randomInt = getRandomInt(1, 100);
-/* END STARTING CODE */
+while(numbers!=randomInt)
+	{ if (numbers>randomInt){
+    		alert("the number is too HIGH...");
+    		numbers=prompt("Guess AGAIN...");
+    	}
+    	else if(numbers<randomInt){
+    		alert("the number is too LOW...");
+    		numbers=prompt("Guess AGAIN...");
+    	} 
+    	}
+    	 if (numbers=randomInt){
+    		alert("congratulations you guessed RIGHT!");
+    	}
 
-// your code goes under here
 
     </script>
 </body>
